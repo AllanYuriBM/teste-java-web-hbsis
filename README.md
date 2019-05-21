@@ -1,14 +1,14 @@
-# teste-java-web-hbsis
+# Teste-java-web-hbsis
 Teste desenvolvedor web java
 
-# FRONT-END
+# front-end
 *Angular js
 *Bootstrap
 
-# BACK-END
+# back-end
 *Java
 
-# DATABASE
+# database
 *MySql 
 
 
