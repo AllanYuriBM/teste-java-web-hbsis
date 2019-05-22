@@ -1,13 +1,16 @@
 package com.hbsis.desafio.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
 import com.hbsis.desafio.models.Cidade;
 
+@Repository
 public interface CidadeRepository extends JpaRepository<Cidade, String>{
 
-	public Cidade findByNomeAndPais(String nome, String pais);
+	Cidade findByNomeAndPais(String nome, String pais);
 	
-	public Cidade findByNome(String nome);
+	//TODO Revisar usabilidade
+	Cidade findByNome(String nome);
 	
 }
