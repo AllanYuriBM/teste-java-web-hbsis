@@ -1,61 +1,18 @@
 <!doctype html>
-<html ng-app="Previsao">
+<html ng-app="app">
     <head>
         <title>HBSIS - Temperatura</title>
-        
-        <!-- Required meta tags -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-        <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
         <script src="js/angular-1.7.8/angular.js"></script>
-        <script>angular.module("Previsao",[])</script>
-        <script src="app/controllers/PrevisaoController.js"></script>
-
-    </head>
-    <body ng-controller="PrevisaoController">
-        <!-- Image and text -->
-        <nav class="navbar navbar-dark bg-primary">
-            <a class="navbar-brand" href="index.html">
-                <img src="img\temperatura.png" width="30" height="30" class="d-inline-block align-top" alt="">
-                HBSIS - Temperatura 
-            </a>
-        </nav>
-        <h2 style="margin-top: 3rem; text-align: center">Cadastre uma cidade!</h2>
-        <form style="text-align: center">
-            <div class="form-group" style="margin: auto">
-                <input type="text" class="form-control" ng-model="pais" style="margin: auto; margin-top: 2rem; width: 400px" placeholder="Sigla do pais..." maxlength="2">
-            </div>
-            <div class="form-group">
-                <input type="text" class="form-control" ng-model="cidade" style="margin: auto; margin-top: 2rem; width: 400px" placeholder="Nome da cidade..."  maxlength="30"> 
-            </div>
-            <button type="button" class="btn btn-primary" ng-click ="cadastrar(pais, cidade);" style="width: 400px; margin: auto; margin-top: 1rem">Cadastrar</button>
-        </form>
-        <table class="table table-bordered" style="width: 1000px; margin: auto; margin-top: 4rem">
-            <thead class="thead-light">
-                <tr>
-                    <th>País</th>
-                    <th>Cidade</th>
-                    <th>Detalhes</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr ng-repeat= 'cidade in cidades_cadastradas'>
-                    <td>{{cidade.pais}}</td>
-                    <td>{{cidade.nome}}</td>
-                    <td>
-                        <button type="button" class="btn btn-primary" ng-click ="buscaApi(cidade.pais, cidade.nome)">...</button>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-        <!-- Optional JavaScript -->
-        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="app/controllers/AppController.js"></script>
+        <script src="js/angular-1.7.8/angular-route.js"> </script>
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-        <script src="app/controllers/PrevisaoController.js"></script>
+    </head>
+    <body>
+        <ng-view></ng-view>
     </body>
 </html>

@@ -22,7 +22,7 @@ public class ApiService {
 		headers.set("Accept", MediaType.APPLICATION_JSON_VALUE);
 		
 		UriComponentsBuilder builder = UriComponentsBuilder.fromHttpUrl(url).
-				path("/data").path("/2.5").path("/forecast").queryParam("q", cidade).queryParam("mode", mode).queryParam("appid", apiKey);
+				path("/data").path("/2.5").path("/forecast").queryParam("q", cidade).queryParam("units", "metric").queryParam("mode", mode).queryParam("appid", apiKey);
 		
 		HttpEntity<?> entity = new HttpEntity<>(headers);
 		
