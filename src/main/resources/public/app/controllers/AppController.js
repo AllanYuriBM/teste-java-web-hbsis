@@ -12,7 +12,7 @@ var app = angular.module('app', ['ngRoute']).controller('AppController', functio
     $window.onload = function() {
         $scope.pesquisar();
     }
-
+    
     $scope.cadastrar = function(pais, cidade) {
         $http({
             method: 'POST',
@@ -60,17 +60,17 @@ app.config(function($routeProvider) {
     $routeProvider
     .when("/", {
       templateUrl : "view/cadastro.html",
-      controller : "AppController"
+      controller : "AppController",
     })
     .when("/previsao/:cidadeForApi", {
       templateUrl : "view/detalhesPrevisao.html",
-      controller : "previsaoController"
+      controller : "PrevisaoController"
     })
     .otherwise({redirectTo:'/'});
     
 });
 
-app.controller("previsaoController", function ($scope, $routeParams, $http, $window) {
+app.controller("PrevisaoController", function ($scope, $routeParams, $http, $window) {
     var cidadeForApi = $routeParams.cidadeForApi
     var buscaApiUrl= '/forecast'
 
