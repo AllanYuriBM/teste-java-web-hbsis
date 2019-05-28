@@ -10,6 +10,4 @@ public interface CidadeRepository extends JpaRepository<Cidade, String>{
 
 	Cidade findByNomeAndPais(String nome, String pais);
 	
-	//TODO Revisar usabilidade
-	
 }
