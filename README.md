@@ -24,6 +24,7 @@ jdk 1.8, maven 3.3+, springboot 2.1.4, mysqlServer, Wamp server
       CREATE TABLE cidade(id INT(11) AUTO_INCREMENT, nome VARCHAR(200), pais VARCtestHAR(200), PRIMARY KEY (id));
       
 * Executar localmente
+
   Você precisará executá-lo a partir da pasta do projeto que contém o arquivo pom.xml.
   Comandos:
    - mvn install
