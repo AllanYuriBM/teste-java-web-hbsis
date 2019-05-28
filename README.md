@@ -2,14 +2,14 @@
 Spring Boot Api
 
 # front-end
-*Angular js
-*Bootstrap
+- Angular js
+- Bootstrap
 
 # back-end
-*Java
+- Java
 
 # database
-*MySql 
+- MySql 
 
 # Requisitos
 jdk 1.8, maven 3.3+, springboot 2.1.4, mysqlServer, Wamp server 
